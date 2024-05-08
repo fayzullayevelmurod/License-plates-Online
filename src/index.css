@@ -66,6 +66,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   margin: 0;
+  color: #000;
 }
 .wrapper {
   overflow: hidden;
@@ -87,4 +88,9 @@ body {
 .blue__btn:hover {
   background: #cbcbcb;
   color: #000;
+}
+.title {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 57.6px;
 }

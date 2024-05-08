@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
+
+.number__box {
+  max-width: 882px;
+  margin: 0 auto;
+  padding-top: 12px;
+}
+.number__box .title {
+  padding: 0 11px;
+}
+.number__filter-boxes {
+  display: flex;
+  gap: 48px;
+}
+.number__filter,
+.number__group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.number__filter .number__text,
+.number__group .number__text {
+  font-family: "Onest", sans-serif;
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 102px;
+  width: 82px;
+  height: 102px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #a3a3a3;
+}
+.button__filter {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin: 28px 0;
+}
+.button__filter .chips {
+  border: 1px solid #cbcbcb;
+  padding: 12px;
+  border-radius: 24px;
+  transition: all 0.2s linear;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+.button__filter .chips:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+.button__filter .number__btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #a3a3a3;
+  font-family: sans-serif;
+}
+.button__filter .number__btn .line {
+  background: #cbcbcb;
+  width: 1px;
+  height: 22px;
+}
+.button__filter .chips.dropdown {
+  gap: 8px;
+}
+.button__filter .chips.dropdown .plate {
+  width: 36px;
+  height: 23px;
+  border-radius: 4px;
+  padding: 6px 4px;
+  border: 1px solid #cbcbcb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.numbers__table .number__tr {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #cbcbcb;
+}
+.numbers__table .number__tr .left__box {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.numbers__table .number__tr .number {
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 62.4px;
+}
+.numbers__table .number__tr .red__text {
+  color: #f60d0d;
+}
+.numbers__table .number__tr .number__text {
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 40.8px;
+}
+.numbers__table .region__plate span {
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 30px;
+}
+.numbers__table .region__plate {
+  text-align: center;
+}
+.numbers__table .region__plate .flex__box {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

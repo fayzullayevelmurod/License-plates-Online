@@ -1,0 +1,44 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1126px;
+  margin-left: auto;
+  padding: 12px 24px 12px 0;
+}
+header .right__box {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+header .nav__list {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+header .nav__list .dot {
+  background: #000;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  display: block;
+}
+header .nav__list .nav__link {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+}
+header .nav__list .nav__link:hover {
+  color: #a3a3a3;
+}
+header .lk {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #cbcbcb;
+  border-radius: 50%;
+  color: #000;
+}

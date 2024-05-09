@@ -56,7 +56,7 @@
   align-items: center;
   gap: 12px;
   color: #a3a3a3;
-  font-family: sans-serif;
+  font-family: "Onest";
 }
 .button__filter .number__btn .line {
   background: #cbcbcb;
@@ -93,6 +93,9 @@
   font-weight: 500;
   line-height: 62.4px;
 }
+.numbers__table .left__box span {
+  letter-spacing: 6px;
+}
 .numbers__table .number__tr .red__text {
   color: #f60d0d;
 }
@@ -100,11 +103,13 @@
   font-size: 34px;
   font-weight: 500;
   line-height: 40.8px;
+  text-transform: uppercase;
 }
 .numbers__table .region__plate span {
   font-size: 34px;
   font-weight: 500;
   line-height: 30px;
+  letter-spacing: normal;
 }
 .numbers__table .region__plate {
   text-align: center;
@@ -113,4 +118,77 @@
   display: flex;
   align-items: center;
   gap: 4px;
+}
+.numbers__table .right__box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.numbers__table .right__box .number__price {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: right;
+}
+.extra__text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #a3a3a3;
+}
+.extra__text li {
+  font-family: "Onest", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22.95px;
+}
+.extra__text .dot {
+  background: #a3a3a3;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  display: block;
+}
+.premium__box {
+  display: flex;
+  align-items: center;
+}
+.promo__img {
+  width: 860px;
+  height: 230px;
+  margin: 12px auto 0 auto;
+}
+.promo__img img {
+  width: 100%;
+  height: 100%;
+}
+.about__services {
+  margin: 48px 0 24px 0;
+  padding: 24px 40px;
+  border-radius: 48px;
+  background: #cbcbcb;
+}
+.about__services .desc {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 16px 0 24px 0;
+}
+.about__services .desc:last-child {
+  padding: 0 0 24px 0;
+}
+.about__services .statistiks__boxes {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.about__services .statistiks__box {
+  max-width: 410px;
+  width: 100%;
+}
+.about__services .statistiks__box span {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 57.6px;
+  color: #f60d0d;
 }

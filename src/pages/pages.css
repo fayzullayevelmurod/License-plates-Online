@@ -760,9 +760,34 @@
     flex: 1 1 auto;
     text-align: center;
   }
+  .table__tab-content {
+    overflow-x: scroll;
+  }
+  .table__tab-content::-webkit-slider-thumb {
+    display: none;
+  }
+  .table__tab-content table {
+    width: 900px;
+  }
+  .personal__area {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .sell__number {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .number__filter-boxes {
+    display: flex !important;
+  }
 }
 
 @media screen and (max-width: 767px) {
+  .personal__area,
+  .sell__number {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
   header {
     margin: 40px 0 24px 0;
     padding: 0 24px;
@@ -848,19 +873,31 @@
     padding-left: 12px;
     padding-right: 12px;
   }
-  .card__page .number__info-box {
+  .card__page .number__info-box,
+  .personal__area .personal__card {
     border-radius: 24px;
     padding: 20px;
   }
-  .card__page .number__boxes {
+  .card__page .number__boxes,
+  .personal__area .personal__card-header {
     flex-direction: column;
     gap: 1rem;
+    align-items: start;
   }
+  .personal__area .personal__card-body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .personal__area {
+    padding-bottom: 50px;
+  }
+
   .card__page .number__price {
     text-align: left;
   }
   .card__page .complain__box .complain__box-img {
     width: 100%;
+    object-fit: cover;
   }
   .card__page .complain__box {
     padding-left: 0;
@@ -874,5 +911,16 @@
   .card__page .status__table a,
   .card__page .status__table .status__text {
     font-size: 14px;
+  }
+  .number__filter-boxes {
+    gap: 16px;
+  }
+  .sell__number .number__filter .number__text,
+  .sell__number .number__group .number__text {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .sell__number {
+    padding-bottom: 50px;
   }
 }

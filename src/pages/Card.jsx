@@ -20,13 +20,13 @@ export const Card = () => {
               </div>
               <div className="flex__box">
                 <img
-                  src="/src/assets/icons/RUS.svg"
+                  src={assets.ru}
                   alt="ru"
                   width="31"
                   height="10"
                 />
                 <img
-                  src="/src/assets/icons/setka.svg"
+                  src={assets.setka}
                   alt="ru"
                   width="19"
                   height="10"

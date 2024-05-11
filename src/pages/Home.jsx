@@ -138,12 +138,16 @@ const numbersDB = [
 export const Home = () => {
   const inputs = useRef([]);
   const [showDropDown, setShowDropDown] = useState(false);
+  const [values, setValue] = useState(""); // Input qiymati
+
   const handleShow = () => {
     setShowDropDown(!showDropDown);
   };
   const handleInputChange = (index, event) => {
     const { value } = event.target;
     let newValue = value;
+    const newValue2 = event.target.value.slice(0, 1);
+    setValue(newValue2);
 
     // Agar input birinchi yoki 5-6 chi bo'lsa
     if (index === 0 || index === 4 || index === 5) {
@@ -185,6 +189,7 @@ export const Home = () => {
                 type="text"
                 className="number__text"
                 placeholder="."
+                maxLength={1}
                 onChange={(event) => handleInputChange(index, event)}
               />
             ))}

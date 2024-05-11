@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Home } from "./pages";
+import { Card, Home, PersonalArea, SellNumber } from "./pages";
 
 export const AppRoutes = () => (
   <Routes>
@@ -9,4 +9,9 @@ export const AppRoutes = () => (
   </Routes>
 );
 
-const routes = [{ path: "/", element: <Home /> }];
+const routes = [
+  { path: "/", element: <Home /> },
+  { path: "/card", element: <Card /> },
+  { path: "/personal-area", element: <PersonalArea /> },
+  { path: "/sel-number", element: <SellNumber /> },
+];

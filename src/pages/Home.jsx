@@ -138,7 +138,6 @@ const numbersDB = [
 export const Home = () => {
   const inputs = useRef([]);
 
-  // Inputga faqatgina harif kiritish mumkun bo'lsa, qo'shimcha shart
   const handleInputChange = (index, event) => {
     const { value } = event.target;
     let newValue = value;
@@ -185,7 +184,7 @@ export const Home = () => {
               <input
                 key={index + 6}
                 ref={(el) => (inputs.current[index + 6] = el)}
-                type="text"
+                type="number"
                 className="number__text"
                 placeholder="."
                 onChange={(event) => handleInputChange(index + 6, event)}
@@ -193,7 +192,16 @@ export const Home = () => {
             ))}
           </div>
         </div>
-        <div className="button__filter">
+        <div className="filter__box button__filter">
+          <button className="chips filter__btn">Фильтры</button>
+          <button className="chips dropdown">
+            <span>Регион</span>
+            <div className="plate">
+              <img src={assets.ru} alt="ru logo" width={28} height={10} />
+            </div>
+          </button>
+        </div>
+        <div className="button__filter media__none">
           <button className="chips">Есть фото</button>
           <button className="chips number__btn">
             <span>10 000 ₽</span>

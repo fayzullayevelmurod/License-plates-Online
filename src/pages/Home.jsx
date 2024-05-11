@@ -152,6 +152,12 @@ export const Home = () => {
     } else {
       // Faqat raqamlarni qabul qilish
       newValue = value.replace(/\D/g, "");
+      if (newValue.length === 1) {
+        // Keyingi inputga o'tkazish
+        if (index < inputs.current.length - 1) {
+          inputs.current[index + 1].focus();
+        }
+      }
     }
 
     event.target.value = newValue;
@@ -165,7 +171,7 @@ export const Home = () => {
   };
   return (
     <>
-      <div className={`overlay ${showDropDown ? 'show' : ''}`}></div>
+      <div className={`overlay ${showDropDown ? "show" : ""}`}></div>
       <div className="number__box">
         <h1 className="title">
           поиск красивого <br /> автомобильного номера

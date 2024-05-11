@@ -660,6 +660,9 @@
 .filter__box {
   display: none;
 }
+.media__drop .close__btn {
+  display: none;
+}
 /* media query */
 @media screen and (max-width: 900px) {
   .number__box {
@@ -692,7 +695,58 @@
   .filter__box {
     display: flex;
   }
+  .media__drop .close__btn {
+    display: block;
+  }
+  .media__drop {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    z-index: 10;
+    background: #fff;
+    justify-content: start;
+    transform: translateY(100%);
+    transition: all 0.2s linear;
+  }
+  .media__drop.show {
+    transform: translateY(0);
+  }
   .button__filter.media__none {
+    margin: 0;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    column-gap: 14px;
+    padding: 24px;
+    justify-content: start;
+  }
+  .close__btn {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    border-radius: 8px;
+    background: #fff;
+  }
+  .overlay {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+    background: rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+  .overlay.show {
+    display: block;
+  }
+  .button__filter.media__none .chips.dropdown {
     display: none;
   }
 }

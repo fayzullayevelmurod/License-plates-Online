@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import assets from "../assets";
 import { Numbers } from "../components";
 const numbersDB = [
@@ -137,7 +137,10 @@ const numbersDB = [
 ];
 export const Home = () => {
   const inputs = useRef([]);
-
+  const [showDropDown, setShowDropDown] = useState(false);
+  const handleShow = () => {
+    setShowDropDown(!showDropDown);
+  };
   const handleInputChange = (index, event) => {
     const { value } = event.target;
     let newValue = value;
@@ -162,6 +165,7 @@ export const Home = () => {
   };
   return (
     <>
+      <div className={`overlay ${showDropDown ? 'show' : ''}`}></div>
       <div className="number__box">
         <h1 className="title">
           поиск красивого <br /> автомобильного номера
@@ -193,7 +197,9 @@ export const Home = () => {
           </div>
         </div>
         <div className="filter__box button__filter">
-          <button className="chips filter__btn">Фильтры</button>
+          <button className="chips filter__btn" onClick={handleShow}>
+            Фильтры
+          </button>
           <button className="chips dropdown">
             <span>Регион</span>
             <div className="plate">
@@ -201,21 +207,24 @@ export const Home = () => {
             </div>
           </button>
         </div>
-        <div className="button__filter media__none">
-          <button className="chips">Есть фото</button>
-          <button className="chips number__btn">
-            <span>10 000 ₽</span>
-            <span className="line"></span>
-            <span>1 520 000 ₽</span>
-          </button>
-          <button className="chips">Перевес</button>
-          <button className="chips">Вместе с авто</button>
-          <button className="chips dropdown">
-            <span>Регион</span>
-            <div className="plate">
-              <img src={assets.ru} alt="ru logo" width={28} height={10} />
-            </div>
-          </button>
+        <div className={`media__drop ${showDropDown ? "show" : ""}`}>
+          <div className="button__filter media__none">
+            <button className="close__btn" onClick={handleShow}></button>
+            <button className="chips">Есть фото</button>
+            <button className="chips number__btn">
+              <span>10 000 ₽</span>
+              <span className="line"></span>
+              <span>1 520 000 ₽</span>
+            </button>
+            <button className="chips">Перевес</button>
+            <button className="chips">Вместе с авто</button>
+            <button className="chips dropdown">
+              <span>Регион</span>
+              <div className="plate">
+                <img src={assets.ru} alt="ru logo" width={28} height={10} />
+              </div>
+            </button>
+          </div>
         </div>
         <Numbers />
         <div className="promo__img">

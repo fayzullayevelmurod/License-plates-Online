@@ -138,6 +138,7 @@ const numbersDB = [
 export const Home = () => {
   const inputs = useRef([]);
   const [showDropDown, setShowDropDown] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [values, setValue] = useState(""); // Input qiymati
 
   const handleShow = () => {

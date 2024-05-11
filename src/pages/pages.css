@@ -749,6 +749,17 @@
   .button__filter.media__none .chips.dropdown {
     display: none;
   }
+  .card__page {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .card__page .number__info-box .btns {
+    flex-wrap: wrap;
+  }
+  .card__page .number__info-box .btns a {
+    flex: 1 1 auto;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -818,6 +829,7 @@
   .about__services .statistiks__boxes {
     flex-direction: column;
     gap: 12px;
+    align-items: start;
   }
   .about__services .statistiks__box span {
     font-size: 32px;
@@ -835,5 +847,32 @@
   .number__box {
     padding-left: 12px;
     padding-right: 12px;
+  }
+  .card__page .number__info-box {
+    border-radius: 24px;
+    padding: 20px;
+  }
+  .card__page .number__boxes {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .card__page .number__price {
+    text-align: left;
+  }
+  .card__page .complain__box .complain__box-img {
+    width: 100%;
+  }
+  .card__page .complain__box {
+    padding-left: 0;
+  }
+  .user__box .flex__box {
+    align-items: start;
+    gap: 1rem;
+    flex-direction: column;
+  }
+  .card__page .status__table p,
+  .card__page .status__table a,
+  .card__page .status__table .status__text {
+    font-size: 14px;
   }
 }

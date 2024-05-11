@@ -98,11 +98,16 @@ header .lk {
     padding-right: 20px;
   }
   header {
-    max-width: 100%;
-    padding-left: 20px;
+    max-width: 882px;
+    /* padding-left: 20px; */
     padding-right: 20px;
   }
   header .right__box {
     margin-right: 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  header {
+    padding-left: 24px;
   }
 }

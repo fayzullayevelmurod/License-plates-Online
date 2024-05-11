@@ -199,9 +199,10 @@ export const Home = () => {
               <input
                 key={index + 6}
                 ref={(el) => (inputs.current[index + 6] = el)}
-                type="number"
+                type="text"
                 className="number__text"
                 placeholder="."
+                maxLength={1}
                 onChange={(event) => handleInputChange(index + 6, event)}
               />
             ))}

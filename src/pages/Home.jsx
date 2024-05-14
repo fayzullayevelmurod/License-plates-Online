@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import assets from "../assets";
 import { Numbers } from "../components";
+import { RegionModal } from "../components/RegionModal";
 const numbersDB = [
   {
     numberLetterOne: "A",
@@ -139,8 +140,12 @@ export const Home = () => {
   const inputs = useRef([]);
   const [showDropDown, setShowDropDown] = useState(false);
   // eslint-disable-next-line no-unused-vars
-  const [values, setValue] = useState(""); // Input qiymati
+  const [values, setValue] = useState("");
+  const [showRegionModal, setShowRegionModal] = useState(false);
 
+  const handleShowRegionModal = () => {
+    setShowRegionModal(!showRegionModal);
+  };
   const handleShow = () => {
     setShowDropDown(!showDropDown);
   };
@@ -150,15 +155,11 @@ export const Home = () => {
     const newValue2 = event.target.value.slice(0, 1);
     setValue(newValue2);
 
-    // Agar input birinchi yoki 5-6 chi bo'lsa
     if (index === 0 || index === 4 || index === 5) {
-      // Faqat harflarni qabul qilish
       newValue = value.replace(/[^a-zA-Z]/g, "");
     } else {
-      // Faqat raqamlarni qabul qilish
       newValue = value.replace(/\D/g, "");
       if (newValue.length === 1) {
-        // Keyingi inputga o'tkazish
         if (index < inputs.current.length - 1) {
           inputs.current[index + 1].focus();
         }
@@ -168,15 +169,20 @@ export const Home = () => {
     event.target.value = newValue;
 
     if ((index === 0 || index === 4 || index === 5) && newValue.length === 1) {
-      // Keyingi inputga o'tkazish
       if (index < inputs.current.length - 1) {
         inputs.current[index + 1].focus();
       }
     }
   };
+
   return (
     <>
-      <div className={`overlay ${showDropDown ? "show" : ""}`}></div>
+      <div
+        className={`overlay ${
+          showDropDown ? "show" : "" || showRegionModal ? "show" : ""
+        }`}
+        onClick={handleShowRegionModal}
+      ></div>
       <div className="number__box">
         <h1 className="title">
           поиск красивого <br /> автомобильного номера
@@ -213,7 +219,7 @@ export const Home = () => {
           <button className="chips filter__btn" onClick={handleShow}>
             Фильтры
           </button>
-          <button className="chips dropdown">
+          <button className="chips dropdown" onClick={handleShowRegionModal}>
             <span>Регион</span>
             <div className="plate">
               <img src={assets.ru} alt="ru logo" width={28} height={10} />
@@ -224,14 +230,19 @@ export const Home = () => {
           <div className="button__filter media__none">
             <button className="close__btn" onClick={handleShow}></button>
             <button className="chips">Есть фото</button>
-            <button className="chips number__btn">
+            {/* <button className="chips number__btn">
               <span>10 000 ₽</span>
               <span className="line"></span>
               <span>1 520 000 ₽</span>
-            </button>
+            </button> */}
+            <input
+              className="chips number__btn"
+              type="number"
+              placeholder="10 000 ₽ | 1 520 000 ₽"
+            />
             <button className="chips">Перевес</button>
             <button className="chips">Вместе с авто</button>
-            <button className="chips dropdown">
+            <button className="chips dropdown" onClick={handleShowRegionModal}>
               <span>Регион</span>
               <div className="plate">
                 <img src={assets.ru} alt="ru logo" width={28} height={10} />
@@ -341,6 +352,10 @@ export const Home = () => {
           </div>
         </div>
       </div>
+      <RegionModal
+        showRegionModal={showRegionModal}
+        handleShowRegionModal={handleShowRegionModal}
+      />
     </>
   );
 };

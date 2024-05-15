@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
 
 .number__box {
@@ -11,15 +18,41 @@
 }
 
 .number__filter-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 48px;
 }
 
 .number__filter,
 .number__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 10px;
+}
+
+.number__filter .number__text::-webkit-input-placeholder,
+.number__group .number__text::-webkit-input-placeholder {
+  color: #000;
+}
+
+.number__filter .number__text::-moz-placeholder,
+.number__group .number__text::-moz-placeholder {
+  color: #000;
+}
+
+.number__filter .number__text:-ms-input-placeholder,
+.number__group .number__text:-ms-input-placeholder {
+  color: #000;
+}
+
+.number__filter .number__text::-ms-input-placeholder,
+.number__group .number__text::-ms-input-placeholder {
+  color: #000;
 }
 
 .number__filter .number__text::placeholder,
@@ -35,17 +68,28 @@
   line-height: 102px;
   width: 82px;
   height: 102px;
-  border: none;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  border: none;
   border-bottom: 2px solid #a3a3a3;
+  border-radius: 0 !important;
   text-transform: uppercase;
 }
 
 .button__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 32px;
   margin: 28px 0;
@@ -55,9 +99,15 @@
   border: 1px solid #cbcbcb;
   padding: 12px;
   border-radius: 24px;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
   font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: #000;
 }
@@ -69,7 +119,11 @@
 }
 
 .button__filter .number__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 12px;
   color: #a3a3a3;
@@ -99,21 +153,37 @@
   border-radius: 4px;
   padding: 6px 4px;
   border: 1px solid #cbcbcb;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .numbers__table .number__tr {
   padding: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   border-bottom: 1px solid #cbcbcb;
 }
 
 .numbers__table .number__tr .left__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 28px;
 }
@@ -151,13 +221,22 @@
 }
 
 .numbers__table .region__plate .flex__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 4px;
 }
 
 .numbers__table .right__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 8px;
 }
@@ -170,7 +249,11 @@
 }
 
 .extra__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 10px;
   color: #a3a3a3;
@@ -192,7 +275,11 @@
 }
 
 .premium__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -226,7 +313,11 @@
 }
 
 .about__services .statistiks__boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 40px;
 }
@@ -252,7 +343,11 @@
 }
 
 .card__page .region__plate-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 4px;
 }
@@ -265,7 +360,11 @@
 }
 
 .card__page .number__boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -288,11 +387,17 @@
 }
 
 .card__page .info__box-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: start;
   gap: 10px;
   border: 1px solid #cbcbcb;
   padding: 4px 12px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 8px;
   height: 74px;
@@ -310,7 +415,11 @@
 }
 
 .card__page .region__plate .flex__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 4px;
 }
@@ -320,7 +429,11 @@
 }
 
 .card__page .number__price .flex__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 14px;
   margin-top: 16px;
@@ -345,8 +458,14 @@
 }
 
 .card__page .status__table .tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 12px 0;
   border-bottom: 1px solid #cbcbcb;
@@ -369,11 +488,15 @@
 }
 
 .card__page .number__info-box .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 24px;
   margin-top: 40px;
 }
-
+.card__page .number__info-box .btns a:hover {
+  background: #e5e5e5;
+}
 .card__page .number__info-box .btns a {
   padding: 16px 32px;
   border-radius: 8px;
@@ -394,14 +517,24 @@
 }
 
 .user__box .flex__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: 8px;
 }
 
 .user__box .flex__box .user__status {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 8px;
 }
@@ -438,7 +571,11 @@
 }
 
 .card__page .complain__box .flex__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 13px;
 }
@@ -473,6 +610,8 @@
 
 /* tabs */
 .tab__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 2px;
 }
@@ -508,13 +647,23 @@
 }
 
 .personal__area .personal__card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .personal__area .left__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 8px;
 }
@@ -540,16 +689,20 @@
   padding: 16px 32px;
   border-radius: 8px;
   background: #fff;
-  transition: all .2s linear;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .personal__area .edit__prifile:hover {
-  background: #E5E5E5;
+  background: #e5e5e5;
 }
 
 .personal__area .personal__card-body {
   padding-top: 40px;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: auto 24px auto;
   grid-template-columns: auto auto;
   gap: 24px;
 }
@@ -563,26 +716,34 @@
 }
 
 .personal__area .box .flex__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 8px;
 }
 
 .personal__area .box .social__media {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 12px;
 }
 .personal__area .box .social__media a path {
-transition: all .2s linear;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .personal__area .box .social__media .telegram__icon:hover path {
-  fill: #229ED9;
+  fill: #229ed9;
 }
 .personal__area .box .social__media .vk__icon:hover path {
-  fill: #0077FF;
+  fill: #0077ff;
 }
 .personal__area .box .social__media .whatsapp__icon:hover path {
-  fill: #25D366;
+  fill: #25d366;
 }
 .personal__area .box a,
 .personal__area .box p {
@@ -598,8 +759,8 @@ transition: all .2s linear;
 
 .personal__area .tab__content table {
   border: none;
+  position: relative;
 }
-
 .personal__area .tab__content tr {
   border-bottom: 1px solid #cbcbcb;
   position: relative;
@@ -645,8 +806,14 @@ transition: all .2s linear;
   font-size: 14px;
   line-height: 16.8px;
   height: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -663,7 +830,11 @@ transition: all .2s linear;
 }
 
 .personal__area .tab__content .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 4px;
 }
@@ -671,8 +842,14 @@ transition: all .2s linear;
 .personal__area .tab__content .icons button {
   width: 56px;
   height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -701,7 +878,11 @@ transition: all .2s linear;
 }
 
 .sell__number .basic__data .flex__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: start;
   gap: 24px;
 }
@@ -721,12 +902,32 @@ transition: all .2s linear;
   color: #000;
 }
 
+.sell__number .basic__data .price__input::-webkit-input-placeholder {
+  color: #a3a3a3;
+}
+
+.sell__number .basic__data .price__input::-moz-placeholder {
+  color: #a3a3a3;
+}
+
+.sell__number .basic__data .price__input:-ms-input-placeholder {
+  color: #a3a3a3;
+}
+
+.sell__number .basic__data .price__input::-ms-input-placeholder {
+  color: #a3a3a3;
+}
+
 .sell__number .basic__data .price__input::placeholder {
   color: #a3a3a3;
 }
 
 .check__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 12px;
   height: 40px;
@@ -745,7 +946,7 @@ transition: all .2s linear;
   display: none;
 }
 
-.check__box input:checked+label::after {
+.check__box input:checked + label::after {
   display: block;
 }
 
@@ -754,10 +955,18 @@ transition: all .2s linear;
   width: 40px;
   height: 40px;
   border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 0;
   position: absolute;
@@ -768,6 +977,8 @@ transition: all .2s linear;
   content: "";
   position: absolute;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 13px;
   width: 16px;
@@ -795,8 +1006,14 @@ transition: all .2s linear;
   height: 250px;
   border-radius: 6px;
   border: 1px solid #cbcbcb;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -864,6 +1081,8 @@ transition: all .2s linear;
   }
 
   .filter__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -881,21 +1100,34 @@ transition: all .2s linear;
     border-top-right-radius: 24px;
     z-index: 10;
     background: #fff;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
     transform: translateY(100%);
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
     transition: all 0.2s linear;
   }
 
   .media__drop.show {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
     transform: translateY(0);
   }
 
   .button__filter.media__none {
     margin: 0;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     row-gap: 24px;
+    -webkit-column-gap: 14px;
+    -moz-column-gap: 14px;
     column-gap: 14px;
     padding: 24px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
   }
 
@@ -903,6 +1135,8 @@ transition: all .2s linear;
     position: absolute;
     top: -10px;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     width: 100px;
     height: 4px;
@@ -920,10 +1154,13 @@ transition: all .2s linear;
   }
 
   .card__page .number__info-box .btns {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 
   .card__page .number__info-box .btns a {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     text-align: center;
   }
@@ -951,12 +1188,13 @@ transition: all .2s linear;
   }
 
   .number__filter-boxes {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
   }
 }
 
 @media screen and (max-width: 767px) {
-
   .personal__area,
   .sell__number {
     padding-left: 12px;
@@ -981,7 +1219,12 @@ transition: all .2s linear;
   }
 
   .numbers__table .number__tr {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: start;
     gap: 12px;
   }
@@ -991,15 +1234,22 @@ transition: all .2s linear;
   }
 
   .footer .footer__top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 24px;
   }
 
   .footer .footer__top .flex__box {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 
   .footer .footer__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 12px;
   }
@@ -1043,8 +1293,13 @@ transition: all .2s linear;
   }
 
   .about__services .statistiks__boxes {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 12px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: start;
   }
 
@@ -1078,13 +1333,21 @@ transition: all .2s linear;
 
   .card__page .number__boxes,
   .personal__area .personal__card-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 1rem;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: start;
   }
 
   .personal__area .personal__card-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 
@@ -1098,6 +1361,7 @@ transition: all .2s linear;
 
   .card__page .complain__box .complain__box-img {
     width: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
   }
 
@@ -1106,8 +1370,13 @@ transition: all .2s linear;
   }
 
   .user__box .flex__box {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: start;
     gap: 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -1123,9 +1392,10 @@ transition: all .2s linear;
 
   .sell__number .number__filter .number__text,
   .sell__number .number__group .number__text {
-    font-size: 30px;
+    font-size: 16px;
     line-height: 40px;
     position: relative;
+    height: 50px;
 
     &::before {
       content: "";

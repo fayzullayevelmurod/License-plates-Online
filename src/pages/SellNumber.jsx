@@ -2,17 +2,24 @@ import { useRef, useState } from "react";
 
 export const SellNumber = () => {
   const inputs = useRef([]);
+  // eslint-disable-next-line no-unused-vars
   const [value, setValue] = useState(""); // Input qiymati
+
   const handleInputChange = (index, event) => {
     const { value } = event.target;
     let newValue = value;
-    const newValue2 = event.target.value.slice(0, 1);
-    setValue(newValue2);
+
+    // Input qiymatini o'zgartirish
+    setValue(newValue);
 
     if (index === 0 || index === 4 || index === 5) {
+      // Raqam emas bo'lgan belgilarni olib tashlash
       newValue = value.replace(/[^a-zA-Z]/g, "");
     } else {
+      // Raqamlarni olib tashlash
       newValue = value.replace(/\D/g, "");
+
+      // Fokusni o'zgartirish
       if (newValue.length === 1) {
         if (index < inputs.current.length - 1) {
           inputs.current[index + 1].focus();
@@ -20,23 +27,16 @@ export const SellNumber = () => {
       }
     }
 
+    // Yangi qiymatni inputga joylash
     event.target.value = newValue;
 
+    // Keyingi inputga otish
     if ((index === 0 || index === 4 || index === 5) && newValue.length === 1) {
       if (index < inputs.current.length - 1) {
         inputs.current[index + 1].focus();
       }
     }
   };
-
-  // useEffect(() => {
-  //   const input = document.querySelector(".price__input");
-  //   if (value === "") {
-  //     input.setAttribute("placeholder", "0 ₽");
-  //   } else {
-  //     input.setAttribute("placeholder", "₽");
-  //   }
-  // }, [value]);
 
   return (
     <div className="sell__number">
@@ -47,9 +47,8 @@ export const SellNumber = () => {
           {[...Array(6)].map((_, index) => (
             <label key={index}>
               <input
-                // key={index}
                 ref={(el) => (inputs.current[index] = el)}
-                type="text"
+                type="tel"
                 className="number__text"
                 placeholder="."
                 maxLength={1}
@@ -63,20 +62,13 @@ export const SellNumber = () => {
             <input
               key={index + 6}
               ref={(el) => (inputs.current[index + 6] = el)}
-              type="text"
+              type="tel"
               className="number__text"
               placeholder="."
               maxLength={1}
               onChange={(event) => handleInputChange(index + 6, event)}
             />
           ))}
-          {window.addEventListener("scroll", () => {
-            if (screenY > 100) {
-              console.log("salom");
-            } else {
-              console.log("ishlamadi");
-            }
-          })}
         </div>
       </div>
       <div className="basic__data">
@@ -87,8 +79,6 @@ export const SellNumber = () => {
             className="price__input"
             type="number"
             placeholder="0 ₽"
-            // value={value}
-            // onChange={handleChange}
           />
           <div className="check__box">
             <input type="checkbox" id="one" />

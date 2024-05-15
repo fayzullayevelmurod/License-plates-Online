@@ -6,20 +6,23 @@ export const SellNumber = () => {
   const handleInputChange = (index, event) => {
     const { value } = event.target;
     let newValue = value;
+    const newValue2 = event.target.value.slice(0, 1);
+    setValue(newValue2);
 
-    // Agar input birinchi yoki 5-6 chi bo'lsa
     if (index === 0 || index === 4 || index === 5) {
-      // Faqat harflarni qabul qilish
       newValue = value.replace(/[^a-zA-Z]/g, "");
     } else {
-      // Faqat raqamlarni qabul qilish
       newValue = value.replace(/\D/g, "");
+      if (newValue.length === 1) {
+        if (index < inputs.current.length - 1) {
+          inputs.current[index + 1].focus();
+        }
+      }
     }
 
     event.target.value = newValue;
 
     if ((index === 0 || index === 4 || index === 5) && newValue.length === 1) {
-      // Keyingi inputga o'tkazish
       if (index < inputs.current.length - 1) {
         inputs.current[index + 1].focus();
       }
@@ -55,6 +58,7 @@ export const SellNumber = () => {
               type="text"
               className="number__text"
               placeholder="."
+              maxLength={1}
               onChange={(event) => handleInputChange(index, event)}
             />
           ))}
@@ -64,12 +68,20 @@ export const SellNumber = () => {
             <input
               key={index + 6}
               ref={(el) => (inputs.current[index + 6] = el)}
-              type="number"
+              type="text"
               className="number__text"
               placeholder="."
+              maxLength={1}
               onChange={(event) => handleInputChange(index + 6, event)}
             />
           ))}
+          {window.addEventListener('scroll', () => {
+            if(screenY > 100) {
+              console.log('salom');
+            } else {
+              console.log('ishlamadi');
+            }
+          })}
         </div>
       </div>
       <div className="basic__data">

@@ -97,7 +97,7 @@ header .lk {
   bottom: -35px;
   left: 0;
   width: 100%;
-  height: 822px;
+  height: 90vh;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
   z-index: 10;
@@ -288,5 +288,12 @@ header .lk {
 @media screen and (max-width: 900px) {
   header {
     padding-left: 24px;
+  }
+  .region__modal .region__modal-content h5 {
+    font-size: 20px;
+  }
+  .region__modal .region__modal-content {
+    padding: 50px 24px;
+    border-radius: 24px;
   }
 }

@@ -20,11 +20,12 @@ export const RegionModal = ({ showRegionModal, handleShowRegionModal }) => {
       <div className="scoll__box">
         <div className="region__modal-content">
           {regionDB?.map((item, indx) => (
-            <div className="flex__box" key={indx}>
+            <div className="flex__box" key={indx} onClick={handleShowRegionModal}>
               <h5>{item.regionName}</h5>
               <span>{item.regionNumber}</span>
             </div>
           ))}
+          
         </div>
       </div>
     </div>

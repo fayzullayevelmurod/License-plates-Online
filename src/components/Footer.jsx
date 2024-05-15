@@ -75,8 +75,8 @@ export const Footer = () => {
         </div>
         <div className="footer__bottom">
           <span>2023 © Госномера Онлайн</span>
-          <span>Политика конфиденциальности</span>
-          <span>Публичная оферта</span>
+          <a href="#!">Политика конфиденциальности</a>
+          <a href="#!">Публичная оферта</a>
         </div>
       </div>
     </footer>

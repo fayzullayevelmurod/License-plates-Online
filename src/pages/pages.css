@@ -59,6 +59,7 @@
   font-size: 18px;
   display: flex;
   align-items: center;
+  color: #000;
 }
 
 .button__filter .chips:hover {
@@ -1124,6 +1125,17 @@ transition: all .2s linear;
   .sell__number .number__group .number__text {
     font-size: 30px;
     line-height: 40px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      background: red;
+    }
   }
 
   .sell__number {

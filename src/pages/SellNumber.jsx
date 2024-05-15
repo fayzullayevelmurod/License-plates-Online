@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 export const SellNumber = () => {
   const inputs = useRef([]);
-
+  const [value, setValue] = useState(""); // Input qiymati
   const handleInputChange = (index, event) => {
     const { value } = event.target;
     let newValue = value;
@@ -29,21 +29,14 @@ export const SellNumber = () => {
     }
   };
 
-  const [value, setValue] = useState(""); // Input qiymati
-
-  // Qiymat o'zgarganda holatni yangilash
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
-
-  useEffect(() => {
-    const input = document.querySelector(".price__input");
-    if (value === "") {
-      input.setAttribute("placeholder", "0 ₽");
-    } else {
-      input.setAttribute("placeholder", "₽");
-    }
-  }, [value]);
+  // useEffect(() => {
+  //   const input = document.querySelector(".price__input");
+  //   if (value === "") {
+  //     input.setAttribute("placeholder", "0 ₽");
+  //   } else {
+  //     input.setAttribute("placeholder", "₽");
+  //   }
+  // }, [value]);
 
   return (
     <div className="sell__number">
@@ -52,15 +45,17 @@ export const SellNumber = () => {
       <div className="number__filter-boxes">
         <div className="number__filter">
           {[...Array(6)].map((_, index) => (
-            <input
-              key={index}
-              ref={(el) => (inputs.current[index] = el)}
-              type="text"
-              className="number__text"
-              placeholder="."
-              maxLength={1}
-              onChange={(event) => handleInputChange(index, event)}
-            />
+            <label key={index}>
+              <input
+                // key={index}
+                ref={(el) => (inputs.current[index] = el)}
+                type="text"
+                className="number__text"
+                placeholder="."
+                maxLength={1}
+                onChange={(event) => handleInputChange(index, event)}
+              />
+            </label>
           ))}
         </div>
         <div className="number__group">
@@ -75,11 +70,11 @@ export const SellNumber = () => {
               onChange={(event) => handleInputChange(index + 6, event)}
             />
           ))}
-          {window.addEventListener('scroll', () => {
-            if(screenY > 100) {
-              console.log('salom');
+          {window.addEventListener("scroll", () => {
+            if (screenY > 100) {
+              console.log("salom");
             } else {
-              console.log('ishlamadi');
+              console.log("ishlamadi");
             }
           })}
         </div>
@@ -92,8 +87,8 @@ export const SellNumber = () => {
             className="price__input"
             type="number"
             placeholder="0 ₽"
-            value={value}
-            onChange={handleChange}
+            // value={value}
+            // onChange={handleChange}
           />
           <div className="check__box">
             <input type="checkbox" id="one" />

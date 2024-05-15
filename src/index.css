@@ -84,10 +84,12 @@ body {
   line-height: 24px;
   color: #fff;
   transition: all 0.2s linear;
+  border: 1px solid transparent;
 }
 .blue__btn:hover {
-  background: #cbcbcb;
+  background: #fff;
   color: #000;
+  border-color: #e5e5e5;
 }
 .title {
   font-size: 48px;

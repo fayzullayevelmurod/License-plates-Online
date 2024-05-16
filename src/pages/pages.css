@@ -63,7 +63,7 @@
 .number__filter .number__text,
 .number__group .number__text {
   font-family: "Onest", sans-serif;
-  font-size: 80px;
+  font-size: 52px;
   font-weight: 600;
   line-height: 102px;
   width: 82px;
@@ -1391,29 +1391,17 @@
   }
 
   .sell__number .number__filter .number__text,
-  .sell__number .number__group .number__text {
+  .sell__number .number__group .number__text,
+  .number__filter .number__text,
+  .number__group .number__text {
     font-size: 16px;
     line-height: 40px;
     position: relative;
     height: 50px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 10px;
-      height: 10px;
-      background: red;
-    }
   }
 
   .sell__number {
     padding-bottom: 50px;
-  }
-
-  .number__box .number__filter-boxes {
-    display: none !important;
   }
 
   .offer__modal {

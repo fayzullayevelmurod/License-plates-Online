@@ -162,8 +162,6 @@ export const Home = () => {
   };
   const handleBlur = (index) => {
     const newPlaceholders = [...placeholders];
-    console.log(index);
-    console.log(newPlaceholders);
     if (carNumber[index] === "") {
       newPlaceholders[index] = "•";
     }

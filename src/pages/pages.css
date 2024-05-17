@@ -232,6 +232,10 @@
 
 .numbers__table .region__plate {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: -4px;
 }
 
 .numbers__table .region__plate .flex__box {
@@ -699,17 +703,13 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
-  color: #000;
-  padding: 16px 32px;
-  border-radius: 8px;
-  background: #fff;
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
-}
-
-.personal__area .edit__prifile:hover {
-  background: #e5e5e5;
+  color: #05aaff;
+  display: flex;
+  align-items: center;
+  gap: 13px;
 }
 
 .personal__area .personal__card-body {
@@ -1134,13 +1134,14 @@
   }
 
   .button__filter.media__none {
+    max-width: 80%;
     margin: 0;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     row-gap: 24px;
     -webkit-column-gap: 14px;
     -moz-column-gap: 14px;
-    column-gap: 26px;
+    column-gap: 8px;
     padding: 24px;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
@@ -1423,5 +1424,10 @@
   .offer__modal {
     max-width: 90%;
     width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .button__filter.media__none {
+    max-width: 100%;
   }
 }

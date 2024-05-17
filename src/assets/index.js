@@ -12,6 +12,8 @@ import vk from "./icons/vk.svg";
 import trash from "./icons/trash.svg";
 import pencil2 from "./icons/pencil2.svg";
 import check from "./icons/check.svg";
+import pencil3 from "./icons/pencil-circle.svg";
+import rusTwo from "./icons/rus-two.svg";
 export default {
   ru,
   setka,
@@ -27,4 +29,6 @@ export default {
   trash,
   pencil2,
   check,
+  pencil3,
+  rusTwo, 
 };

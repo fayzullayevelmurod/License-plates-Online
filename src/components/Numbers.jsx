@@ -99,7 +99,7 @@ export const Numbers = () => {
               </div>
               {item.regionIcon ? (
                 <div className="flex__box">
-                  <img src={assets.ru} alt="ru" width={31} height={10} />
+                  <img src={assets.rusTwo} alt="ru" width={31} height={10} />
                   <img src={assets.setka} alt="ru" width={19} height={10} />
                 </div>
               ) : null}

@@ -153,8 +153,35 @@ export const Home = () => {
   };
   const handleShow = () => {
     setShowDropDown(!showDropDown);
-    document.body.classList.toggle('no__scroll')
+    document.body.classList.toggle("no__scroll");
   };
+  const handleFocus = (index) => {
+    const newPlaceholders = [...placeholders];
+    newPlaceholders[index] = "";
+    setPlaceholders(newPlaceholders);
+  };
+  const handleBlur = (index) => {
+    const newPlaceholders = [...placeholders];
+    console.log(index);
+    console.log(newPlaceholders);
+    if (carNumber[index] === "") {
+      newPlaceholders[index] = "•";
+    }
+    setPlaceholders(newPlaceholders);
+  };
+  const handleFocus2 = (index) => {
+    const newPlaceholders2 = [...placeholders2];
+    newPlaceholders2[index] = "";
+    setPlaceholders2(newPlaceholders2);
+  };
+  const handleBlur2 = (index) => {
+    const newPlaceholders3 = [...placeholders2];
+    if (carNumber2[index] === "") {
+      newPlaceholders3[index] = "•";
+    }
+    setPlaceholders2(newPlaceholders3);
+  };
+  
   const handleInputChange = (index, event) => {
     const { value } = event.target;
     let newValue = value;
@@ -184,39 +211,17 @@ export const Home = () => {
     ) {
       if (index > 0 && inputs.current[index - 1]) {
         inputs.current[index - 1].focus();
-        // const newPlaceholders = [...placeholders];
-        // newPlaceholders[index] = ".";
-        // setPlaceholders(newPlaceholders);
-        // const newPlaceholders2 = [...placeholders2];
-        // newPlaceholders2[index] = ".";
-        // setPlaceholders2(newPlaceholders2);
+        const newPlaceholders = [...placeholders];
+        newPlaceholders[index] = ".";
+        setPlaceholders(newPlaceholders);
+
+        const newPlaceholders2 = [...placeholders2];
+        newPlaceholders2[index] = ".";
+        setPlaceholders2(newPlaceholders2);
+        handleBlur(index);
+        handleBlur2(index);
       }
     }
-  };
-
-  const handleFocus = (index) => {
-    const newPlaceholders = [...placeholders];
-    newPlaceholders[index] = "";
-    setPlaceholders(newPlaceholders);
-  };
-  const handleBlur = (index) => {
-    const newPlaceholders = [...placeholders];
-    if (carNumber[index] === "") {
-      newPlaceholders[index] = "•";
-    }
-    setPlaceholders(newPlaceholders);
-  };
-  const handleFocus2 = (index) => {
-    const newPlaceholders2 = [...placeholders2];
-    newPlaceholders2[index] = "";
-    setPlaceholders2(newPlaceholders2);
-  };
-  const handleBlur2 = (index) => {
-    const newPlaceholders3 = [...placeholders2];
-    if (carNumber2[index] === "") {
-      newPlaceholders3[index] = "•";
-    }
-    setPlaceholders2(newPlaceholders3);
   };
 
   return (
@@ -344,7 +349,12 @@ export const Home = () => {
                   </div>
                   {item.regionIcon ? (
                     <div className="flex__box">
-                      <img src={assets.rusTwo} alt="ru" width={31} height={10} />
+                      <img
+                        src={assets.rusTwo}
+                        alt="ru"
+                        width={31}
+                        height={10}
+                      />
                       <img src={assets.setka} alt="ru" width={19} height={10} />
                     </div>
                   ) : null}

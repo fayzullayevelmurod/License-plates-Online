@@ -1,10 +1,15 @@
 import { useState } from "react";
 import assets from "../assets";
 import { OfferModal } from "../components/OfferModal";
+// import { LoginModal } from "../components/LoginModal";
 
 export const Card = () => {
   const [showOferModal, setShowOferModal] = useState(false);
+  // const [showLoginModal, setShowLoginModal] = useState(false);
 
+  // const handleShowLoginModal = () => {
+  //   setShowLoginModal(!showLoginModal);
+  // };
   const handleShowOfferModal = () => {
     setShowOferModal(!showOferModal);
   };
@@ -12,12 +17,19 @@ export const Card = () => {
   return (
     <>
       <OfferModal showOferModal={showOferModal} />
+      {/* <LoginModal showLoginModal={showLoginModal} /> */}
       <div
         className={`overlay ${showOferModal ? "show" : ""}`}
         onClick={handleShowOfferModal}
       ></div>
+      {/* <div
+        className={`overlay ${showLoginModal ? "show" : ""}`}
+        onClick={handleShowLoginModal}
+      ></div> */}
       <div className="card__page">
-        <h1 className="title">продажа номера А777АА 77</h1>
+        <h1 className="title">
+          продажа номера А777АА 77
+        </h1>
         <p className="title__desc">Размещён 13.01.2024, обновлён 21.02.2024</p>
         <div className="number__info-box">
           <div className="number__boxes">

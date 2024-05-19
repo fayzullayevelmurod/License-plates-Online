@@ -184,6 +184,31 @@ header .lk {
   max-width: 560px;
   display: none;
 }
+.offer__modal .flex__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.offer__modal .flex__box > div {
+  width: 100%;
+}
+.offer__modal .pt-24 {
+  padding-top: 24px;
+  color: #000;
+}
+.offer__modal .flex__box input {
+  width: 100%;
+}
+.offer__modal .flex__box .blue__btn {
+  width: fit-content !important;
+}
+.offer__modal .flex__box .forget__password {
+  color: #a3a3a3;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
 .offer__modal.show {
   display: block;
 }
@@ -324,4 +349,24 @@ header .lk {
 }
 body.no__scroll {
   overflow: hidden;
+}
+@media screen and (max-width: 480px) {
+  .offer__modal .flex__box.wrap {
+    flex-wrap: wrap;
+  }
+  .offer__modal .flex__box:last-child {
+    margin-top: 10px;
+  }
+  .offer__modal .flex__box .price {
+    margin-top: 0;
+  }
+  .offer__modal .flex__box input {
+    margin-bottom: 0;
+  }
+  .login__modal p {
+    padding-bottom: 20px;
+  }
+  .login__modal .last {
+    padding-top: 20px;
+  }
 }

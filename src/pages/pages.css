@@ -96,7 +96,12 @@
   border-radius: 0 !important;
   text-transform: uppercase;
 }
-
+.media__drop {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 8;
+}
 .button__filter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1126,6 +1131,10 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 8;
   }
 
   .media__drop .close__btn {
@@ -1134,6 +1143,7 @@
 
   .media__drop {
     position: fixed;
+    top: auto;
     bottom: 0;
     left: 0;
     width: 100%;

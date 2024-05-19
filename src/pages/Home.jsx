@@ -179,7 +179,7 @@ export const Home = () => {
     }
     setPlaceholders2(newPlaceholders3);
   };
-  
+
   const handleInputChange = (index, event) => {
     const { value } = event.target;
     let newValue = value;
@@ -290,11 +290,20 @@ export const Home = () => {
               <span className="line"></span>
               <span>1 520 000 ₽</span>
             </button> */}
-            <input
-              className="chips number__btn"
-              type="number"
-              placeholder="10 000 ₽ | 1 520 000 ₽"
-            />
+
+            <div className="number__btn-box">
+              <input
+                className="chips number__btn"
+                type="number"
+                placeholder="10 000 ₽"
+              />
+              <span className="line"></span>
+              <input
+                className="chips number__btn"
+                type="number"
+                placeholder="15 000 ₽"
+              />
+            </div>
             <button className="chips">Перевес</button>
             <button className="chips">Вместе с авто</button>
             <button className="chips dropdown" onClick={handleShowRegionModal}>

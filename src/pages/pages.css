@@ -102,6 +102,11 @@
   background: #fff;
   z-index: 8;
 }
+.flex__btns {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 .button__filter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -110,7 +115,7 @@
   -ms-flex-align: center;
   align-items: center;
   gap: 32px;
-  margin: 28px 0;
+  padding: 28px 0 32px 0;
 }
 
 .button__filter .chips {
@@ -692,7 +697,6 @@
 .personal__area .personal__card {
   padding: 40px;
   border-radius: 48px;
-  background: #f7f7f7;
 }
 
 .personal__area .personal__card-header {
@@ -1174,6 +1178,8 @@
     margin: 0;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: start;
     row-gap: 24px;
     -webkit-column-gap: 14px;
     -moz-column-gap: 14px;

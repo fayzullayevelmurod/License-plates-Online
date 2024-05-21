@@ -304,8 +304,10 @@ export const Home = () => {
                 placeholder="15 000 ₽"
               />
             </div>
+            <div className="flex__btns">
             <button className="chips">Перевес</button>
             <button className="chips">Вместе с авто</button>
+            </div>
             <button className="chips dropdown" onClick={handleShowRegionModal}>
               <span>Регион</span>
               <div className="plate">

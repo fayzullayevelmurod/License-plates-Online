@@ -99,9 +99,13 @@
 .media__drop {
   position: sticky;
   top: 0;
-  background: #fff;
+  background: #ffffff66;
   z-index: 8;
+  backdrop-filter: blur(10px);
 }
+/* .media__drop::before {
+
+} */
 .flex__btns {
   display: flex;
   align-items: center;
